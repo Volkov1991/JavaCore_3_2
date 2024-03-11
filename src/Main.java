@@ -18,19 +18,18 @@ public class Main {
         saveGameProgress("/Users/a0000/Documents/Games/savegames/game3.dat", game3);
 
         ArrayList games = new ArrayList<>();
-        games.add("/Users/a0000/Documents/Games/savegames/game1.dat");
-        games.add("/Users/a0000/Documents/Games/savegames/game2.dat");
-        games.add("/Users/a0000/Documents/Games/savegames/game2.dat");
+        games.add("game1.dat");
+        games.add("game2.dat");
+        games.add("game3.dat"); // исправил (было game2.dat)
 
         zipFiles("/Users/a0000/Documents/Games/savegames/games.zip", games);
+
         File dat1 = new File("/Users/a0000/Documents/Games/savegames/game1.dat");
         File dat2 = new File("/Users/a0000/Documents/Games/savegames/game2.dat");
         File dat3 = new File("/Users/a0000/Documents/Games/savegames/game3.dat");
         dat1.delete();
         dat2.delete();
         dat3.delete();
-
-
     }
 
     private static void zipFiles(String folders, ArrayList games) {
